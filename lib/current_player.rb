@@ -1,18 +1,20 @@
 def turn_count(board)
   counter = 0
   board.each do |turn|
-    turn    # only need to interpolate if within a string
-  if turn == "X" || turn == "O"
-  counter += 1
-  end
+    if turn == "X" || turn == "O"
+      turn
+      counter += 1
+end
 end
 counter
 end
 
+# If the turn count is an even number, the #current_player method should return "X", otherwise, it should return "O".
+
 def current_player(board)
-  if turn_count(board).even? 
-    "X"     # puts will return nil, forgot.
-  else turn_count(board).odd?
+  if turn_count(board).even?
+    "X"
+  else
     "O"
-  end
+end
 end
