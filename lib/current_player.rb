@@ -12,7 +12,7 @@ end
 # If the turn count is an even number, the #current_player method should return "X", otherwise, it should return "O".
 
 def current_player(board)
-  if turn_count.odd?
+  if turn_count().odd?
     "O"
   else
     "X"
